@@ -1,5 +1,5 @@
 import { createStore } from "zustand/vanilla"
-const API_KEY = "304090ed092c4b3cbf0141340230105"
+const API_KEY = "f018453c03bd48f898d145316232305"
 
 export const useGlobalStore = createStore((set) => ({
 	theme: "light",
@@ -30,7 +30,7 @@ export const useGlobalStore = createStore((set) => ({
 		}),
 	fetchWeatherData: async (cityName) => {
 		const response = await fetch(
-			`http://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${cityName}&days=5&aqi=no&alerts=no`
+			`http://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${cityName}&days=14&aqi=no&alerts=no`
 		)
 		return await response.json()
 	}
